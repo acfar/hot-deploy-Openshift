@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rsync-1
+  namespace: hotswapping
+spec:
+  selector:
+    matchLabels:
+      app: rsync-1
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rsync-1
+    spec:
+      containers:
+        - name: rsync-1
+          image: image-registry.openshift-image-registry.svc:5000/hotswapping/hello-dunia:v1
+          ports:
+            - containerPort: 8080
