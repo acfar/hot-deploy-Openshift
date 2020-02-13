@@ -14,13 +14,26 @@ public class HelloController {
         return text;
     }
 
-    @GetMapping("hello2")
+    @GetMapping("hello")
     public String helloWorld1(){
-        return "Hello Dunia";
+        return "Hello Dunia adasd";
+    }
+
+
+    @GetMapping("hello4")
+    public String helloWorld4(){
+        return "H";
     }
 
     @GetMapping("hello3")
-    public String helloWorld2(){
-        return "Hello Dunia 3";
+    public String helloWorld3(){
+        return "Hello Dunia";
     }
+
+    @GetMapping("hello5")
+    public String helloWorld5(){
+        return "Hello Dunia test";
+    }
+
+
 }

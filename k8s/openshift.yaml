@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rsync-1
-  namespace: hotswapping
+  name: skafoldd
 spec:
   selector:
     matchLabels:
-      app: rsync-1
+      app: skafoldd
   replicas: 1
   template:
     metadata:
       labels:
-        app: rsync-1
+        app: skafoldd
     spec:
       containers:
-        - name: rsync-1
-          image: image-registry.openshift-image-registry.svc:5000/hotswapping/hello-dunia:v1
+        - name: skafoldd
+          image: default-route-openshift-image-registry.apps.ocp.lab.supporting.devmandiri.co.id/catalog-backend/skafoldd
           ports:
             - containerPort: 8080
